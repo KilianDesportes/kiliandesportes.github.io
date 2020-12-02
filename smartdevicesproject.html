@@ -13,6 +13,9 @@
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
 
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
@@ -42,7 +45,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Work<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="active"><a href="smartdevicesproject.html"><b>Sensor manufacturing and data-sheet writting</b></a></li>
-                            <li><a href="soaiotproject.html">Automation of the management of connected objects in a room</a></li>
+                            <li><a href="soaiotproject.html">Middleware and Service</a></li>
                             <li><a href="dataengineering.html">Data Engineering Project</a></li>
                             <li><a href="iotcommunication.html">IoT Communication Project</a></li>
                             <li><a href="innovationhumanity.html">Innovation & Humanity Project</a></li>
@@ -54,6 +57,18 @@
 		</div>
 	</div> 
 	<!-- /.navbar -->
+
+	<script>
+	    function affichManipul() {
+	        if(document.getElementById('a_manipuler').style.display == "none") {
+	            document.getElementById('a_manipuler').style.display = "block";
+	            document.getElementById('toaffich').innerHTML = "Hide Descriptive Part";
+	        } else {
+	            document.getElementById('a_manipuler').style.display = "none";
+	            document.getElementById('toaffich').innerHTML = "Show Descriptive Part";
+	        }
+	    }
+	</script>
 
 	<header id="head" class="secondary"></header>
 
@@ -117,59 +132,108 @@
 				<h3>Numquam, ut iure quia facere totam quas odit illo incidunt</h3>
 				<p>Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
 				<p>Dignissimos, beatae, praesentium illum eos autem perspiciatis? Minus, non, tempore, illo, mollitia exercitationem tempora quas harum odio dolores delectus quidem laudantium adipisci ducimus ullam placeat eaque minima quae iure itaque corporis magni nesciunt eius sed dolor doloremque id quasi nisi.</p>
-			
+
+				<button id="toaffich" class="btn btn-primary btn-medium" onclick="affichManipul()">Show Descriptive Part</button>
+				
+				<div id="a_manipuler" style="display: none">
+					
+
+					TEST 
+
+					<hr size="10" color="black">
+				</div>
+				
 				<h3>Introduction to Sensors</h3>
 
-				<table style="width:100%">
-					<tr>
-					  <td>Understand basic notions of sensors, data acquisition: physics, electronics and metrology point of view</td>
-					  <td>4</td>
-					</tr>
-					<tr>
-					  <td>Be able to manufacture a nano-particles sensor using micro-electronics tools: chemical synthesis, assembly, testing</td>
-					  <td>4</td>
-					</tr>
-					<tr>
-					  <td>Be able to design the datasheet of the sensor manufactured</td>
-					  <td>4</td>
-					</tr>
-				  </table>
+				<ul><li>Understand basic notions of sensors, data acquisition: physics, electronics and metrology point of view
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
 
-				  <h3>Microcontrollers and Open Source Hardware</h3>
-				  
-				  <table style="width:100%">
-					<tr>
-					  <td>Understand microcontroller archictecture and how to use them</td>
-					  <td>3</td>
-					</tr>
-					<tr>
-					  <td>Be able to design data acquisition system (sensor, conditioner, microcontroller) with respect to the application</td>
-					  <td>3</td>
-					</tr>
-					<tr>
-					  <td>Be able to design the electronic circuit of a sensor’s signal conditioner (design + simulation)</td>
-					  <td>3</td>
-					</tr>
-					<tr>
-						<td>Be able to design a shield to accommodate the gas sensor</td>
-						<td>3</td>
-					</tr>
-					<tr>
-						<td>Be abe to design the sofware to use the gas sensor and its HMI</td>
-						<td>4</td>
-					</tr>
-					<tr>
-						<td>Be able to combine all of the above mentioned components into a smart device</td>
-						<td>3</td>
-					</tr>
-				  </table>
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+
+				<br><br><ul><li>Be able to manufacture a nano-particles sensor using micro-electronics tools: chemical synthesis, assembly, testing
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+
+				<br><br><ul><li>Be able to design the datasheet of the sensor manufactured
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+				
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+
+				<h3>Microcontrollers and Open Source Hardware</h3>
+
+				<br><br><ul><li>Understand microcontroller archictecture and how to use them
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+
+				<br><br><ul><li>Be able to design data acquisition system (sensor, conditioner, microcontroller) with respect to the application
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+
+				<br><br><ul><li>Be able to design the electronic circuit of a sensor’s signal conditioner (design + simulation)
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+
+				<br><br><ul><li>Be able to design a shield to accommodate the gas sensor
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+
+				<br><br><ul><li>Be abe to design the sofware to use the gas sensor and its HMI
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				
+				<br><br><ul><li>Be able to combine all of the above mentioned components into a smart device
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				
 
 			</article>
 			<!-- /Article -->
 
 		</div>
 	</div>	<!-- /container -->
-	
 
 	<footer id="footer" class="top-space">
 
