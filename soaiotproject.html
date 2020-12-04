@@ -97,7 +97,7 @@
 				We were able to discover and practice cloud computing with <b>OpenStack</b>, a private cloud service, and a <b>Docker</b>, a containerisation service.<br>
 				During these practical works, we were able to take charge of the operation and implementation of a cloud for the deployment of applications (with microservices), the <b>SaaS</b> part of cloud computing, as well as the implementation of the infrastructure (VM, containers), the <b>IaaS</b> part of cloud computing.<br>
 				We have also seen how to organise the different VMs in a more complex network than a simple local network, in order to better manage the different services.<br>
-				All these experiences will have given us a good understanding of the stakes and possible uses of cloud computing. <br><br>
+				All these experiences will have given us a good understanding of the stakes and possible uses of cloud computing.<br><br>
 				</p>
 				<p class="text-right">
 					<a target="_blank" href="assets/reports/tp_cloud_ISS_B15_desportes_imekraz.pdf" class="btn btn-primary btn-xs">Link to Practical Work report >></a>
@@ -105,12 +105,12 @@
 
 				<h2>Middleware for the Internet of Things</h2>
 
-				<p align="justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-				inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
-				quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-				adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum 
-				exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
-				esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+				<p align="justify">During this course, we went through 4 tools used in internet of things : MQTT Protocol, Sierra Wireless MangOH, oneM2M and Node-Red.<br>
+				We initially took in hand <b>MQTT</b> and its mechanism of publish/subscribe to then set it up with an arduino to be able to light in LED via a broker and topic MQTT.<br>
+				In a second time, we were able to take in hand the <b>mangOH</b> cards of <b>Sierra Wireless</b>. This allowed us to see that there were microcontrollers that allowed us to perform many functions simply, all with access to a graphical interface with simple parameterization (creation of functions, activation of sensors, ...etc) but also dashboard-type graphical interfaces, with measurement curves for example. <br>
+				We then discovered and used the <b>oneM2M standard</b> which allows, through the use of REST queries, to create a very useful resource tree for the internet of objects, which allows to store both objects but also the data linked to it, via different entity levels. This standard will allow to centralize the information related to a network of connected objects.<br>
+				Finally, we used <b>Node-Red</b> and nodejs to create a gateway between the oneM2M standard and MQTT, with the creation of data entities to light lamps following different MQTT requests arriving on several topics. We can also note that node-red could have been used to create a dashboard to represent these different functions.<br>
+				We have therefore been able, through these different works, to take in hand many tools to represent and use networks of connected objects at the application level.<br>
 				</p>
 				<p class="text-right">
 					<a target="_blank" href="assets/reports/M2M_B1_Desportes_Imekraz_Report.pdf" class="btn btn-primary btn-xs">Link to Practical Work report >></a>
@@ -171,81 +171,26 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				During the practical work, we were able to carry out a theoretical analysis of what cloud computing and its various components (<b>SaaS, IaaS, PaaS</b>) were, as well as its link with <b>virtual machines</b> and <b>container</b> services.
+				<p align="justify">During the practical work, we were able to carry out a theoretical analysis of what cloud computing and its various components (<b>SaaS, IaaS, PaaS</b>) were, as well as its link with <b>virtual machines</b> and <b>container</b> services.</p>
 
-				<br><br><ul><li>Use a IaaS-type cloud service
+				<ul><li>Use a IaaS-type cloud service
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				We were able to take over and use the <b>OpenStack</b> platform, which allows us to create cloud environments (VM instances) in a simple way via an overlay on the server <b>infrastructure</b> (IaaS).
+				<p align="justify">We were able to take over and use the <b>OpenStack</b> platform, which allows us to create cloud environments (VM instances) in a simple way via an overlay on the server <b>infrastructure</b> (IaaS).</p>
 
-				<br><br><ul><li>Deploy and adapt a cloud-based platform for IoT
+				<ul><li>Deploy and adapt a cloud-based platform for IoT
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				During tp, with openstack, we were able to set up a complete <b>cloud environment</b>, with an architecture containing several networks, to host and use several <b>microservices</b> that <b>interacted</b> with each other and with a user. 
+				<p align="justify">During tp, with openstack, we were able to set up a complete <b>cloud environment</b>, with an architecture containing several networks, to host and use several <b>microservices</b> that <b>interacted</b> with each other and with a user. </p>
 			
-				</div>
-				<hr size="10" color="black">
-
-				<h3>Service Oriented Architecture</h3>
-
-				<button id="btnSOA" class="btn btn-primary btn-sm" onclick="affichManipul('btnSOA','divSOA','skills')">
-					Show skills
-				</button>
-				<div id="divSOA" style="display: none"><br>
-
-				<ul><li>Know how to define a Service Oriented Architecture
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-				</li></ul>
-
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
-
-				<br><br><ul><li>Deploy an SOA with web services
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-				</li></ul>
-
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
-
-				<br><br><ul><li>Deploy and configure an SOA using SOAP
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-				</li></ul>
-				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
-
-				<br><br><ul><li>Deploy and configure an SOA using REST
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-				</li></ul>
-				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
-
-				<br><br><ul><li>Integrate a process manager in an SOA
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-				</li></ul>
-				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
-
 				</div>
 				<hr size="10" color="black">
 
@@ -263,43 +208,98 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				<p align="justify">During this course, we were able to theoretically discover several standards both for the <b>management and representation of connected objects</b> or the <b>communication</b> between them. During the oneM2M MOOC we discovered several standards in a theoretical way. We were then able to use <b>MQTT</b> and <b>oneM2M</b> in more detail during the praticals works and the project.</p>
 
-				<br><br><ul><li>Deploy an architecture compliant to an IoT standard and implement a sensor network
+				<ul><li>Deploy an architecture compliant to an IoT standard and implement a sensor network
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				<p align="justify">We were able, both during a practical work and also during the project, to deploy a <b>connected object architecture</b> using the <b>oneM2M</b> standard and the <b>REST API</b>. Then, especially during the project, we set up services so that these objects could communicate and <b>interact</b> with each other.</p>
 
-				<br><br><ul><li>Deploy and configure and IoT architecture using OM2M
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-				</li></ul>
-				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
-
-				<br><br><ul><li>Interact with the different resources of the architecture using REST services
+				<ul><li>Deploy and configure and IoT architecture using OM2M
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				<p align="justify">During the project, we were able to implement a <b>simulated IoT sensor architecture</b> using the oneM2M standard. These sensors were arranged in different rooms and had <b>containers</b> for the different <b>data</b> they sent. These different data were represented by <b>content instances</b>. This allowed a clear, precise and functional representation of the simulated <b>sensor network</b> that we wanted to implement. </p>
 
-				<br><br><ul><li>Integrate a new technology into the deployed architecture
+				<ul><li>Interact with the different resources of the architecture using REST services
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				<p align="justify">To communicate with the different connected objects of the architecture, we had to use <b>REST services</b> to access the different content instances of the sensors (the last data collected by this sensor) and allow to perform different actions. We also used the <b>REST API</b> to implement this sensor architecture.</p>
+
+				<ul><li>Integrate a new technology into the deployed architecture
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+				
+				<p align="justify">During the last practical work, we were able to make the two standards <b>MQTT</b> and <b>oneM2M</b> interact with <b>node-red</b> to allow actions in the oneM2M architecture on data reception in some MQTT topics. However, we did not integrate new technologies in the project, we only used oneM2M with REST services.</p>
+
+				</div>
+				<hr size="10" color="black">
+
+				<h3>Service Oriented Architecture</h3>
+
+				<button id="btnSOA" class="btn btn-primary btn-sm" onclick="affichManipul('btnSOA','divSOA','skills')">
+					Show skills
+				</button>
+				<div id="divSOA" style="display: none"><br>
+
+				<ul><li>Know how to define a Service Oriented Architecture
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+
+				<ul><li>Deploy an SOA with web services
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+
+				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+
+				<ul><li>Deploy and configure an SOA using SOAP
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+				
+				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+
+				<ul><li>Deploy and configure an SOA using REST
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+				
+				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+
+				<ul><li>Integrate a process manager in an SOA
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+				
+				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
 
 				</div>
 				<hr size="10" color="black">
