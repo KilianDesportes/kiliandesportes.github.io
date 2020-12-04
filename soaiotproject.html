@@ -58,27 +58,22 @@
 		<div class="row">
 
 			<!-- Sidebar -->
-			<aside class="col-md-4 sidebar sidebar-left">
+			<aside class="col-md-3 sidebar sidebar-left">
 
 				<div class="row widget">
 					<div class="col-xs-12">
 						<h4>Middleware and Service</h4>
-						<p align="justify">During this training unit, we learned the concepts of cloud computing, web microservices (via the REST API) and oneM2M architecture.<br>
-						The aim of taking all these tools in hand is to enable us to set up a complete installation of action automation based on the Internet of Things.<br>
-						This was the final topic of the training unit, with the automation (lights, windows, heating,...) of a classroom via different sensors.</p>
-					</div>
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>oneM2M</h4>
-						<p><img src="assets/images/1.jpg" alt=""></p>
-					</div>
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Web microservices</h4>
-						<p><img src="assets/images/2.jpg" alt=""></p>
-						<p>Qui, debitis, ad, neque reprehenderit laborum soluta dolor voluptate eligendi enim consequuntur eveniet recusandae rerum? Atque eos corporis provident tenetur.</p>
+						<p align="justify">
+							During this training unit, we learned the concepts of cloud computing, web microservices (and REST API) and middleware for the Internet of Things.
+							<br><br>
+							We practiced cloud computing with OpenStack and Dockers tools to learn how to deploy and use cloud computing in an Internet of Things context.
+							<br>
+							We also learned the main standards for the Internet of Things, on both managing and communicating sides of connected objets. We practiced more deeply oneM2M standard to allow us to create a complete architecture for Internet of Things by representing sensors and their datas and by allowing them to be interconnected.
+							<br>
+							We also learned how to setup and use microservices to interconnect these objects by using REST API.
+							<br><br>
+							The aim of taking all these tools in hand is to enable us to set up a complete installation of action automation based on the Internet of Things. This was the final topic of the training unit, with the automation (lights, windows, heating,...) of a classroom with different virtual sensors.
+						</p>
 					</div>
 				</div>
 
@@ -86,18 +81,19 @@
 			<!-- /Sidebar -->
 			
 			<!-- Article main content -->
-			<article class="col-md-8 maincontent">
+			<article class="col-md-9 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Middleware and Service Traning Unit</h1>
 				</header>
 
 				<h2>Adaptability: Cloud and Autonomic Computing</h2>
 
-				<p align="justify">This material was not carried out via one project but through several practical works covering a range of <b>cloud computing</b> technologies.
-				We were able to discover and practice cloud computing with <b>OpenStack</b>, a private cloud service, and a <b>Docker</b>, a containerisation service.<br>
-				During these practical works, we were able to take charge of the operation and implementation of a cloud for the deployment of applications (with microservices), the <b>SaaS</b> part of cloud computing, as well as the implementation of the infrastructure (VM, containers), the <b>IaaS</b> part of cloud computing.<br>
-				We have also seen how to organise the different VMs in a more complex network than a simple local network, in order to better manage the different services.<br>
-				All these experiences will have given us a good understanding of the stakes and possible uses of cloud computing.<br><br>
+				<p align="justify">
+					This material was not carried out via one project but through several practical works covering a range of <b>cloud computing</b> technologies.
+					We were able to discover and practice cloud computing with <b>OpenStack</b>, a private cloud service, and a <b>Docker</b>, a containerisation service.<br>
+					During these practical works, we were able to take charge of the operation and implementation of a cloud for the deployment of applications (with microservices), the <b>SaaS</b> part of cloud computing, as well as the implementation of the infrastructure (VM, containers), the <b>IaaS</b> part of cloud computing.<br>
+					We have also seen how to organise the different VMs in a more complex network than a simple local network, in order to better manage the different services.<br>
+					All these experiences will have given us a good understanding of the stakes and possible uses of cloud computing.<br><br>
 				</p>
 				<p class="text-right">
 					<a target="_blank" href="assets/reports/tp_cloud_ISS_B15_desportes_imekraz.pdf" class="btn btn-primary btn-xs">Link to Practical Work report >></a>
@@ -105,12 +101,13 @@
 
 				<h2>Middleware for the Internet of Things</h2>
 
-				<p align="justify">During this course, we went through 4 tools used in internet of things : MQTT Protocol, Sierra Wireless MangOH, oneM2M and Node-Red.<br>
-				We initially took in hand <b>MQTT</b> and its mechanism of publish/subscribe to then set it up with an arduino to be able to light in LED via a broker and topic MQTT.<br>
-				In a second time, we were able to take in hand the <b>mangOH</b> cards of <b>Sierra Wireless</b>. This allowed us to see that there were microcontrollers that allowed us to perform many functions simply, all with access to a graphical interface with simple parameterization (creation of functions, activation of sensors, ...etc) but also dashboard-type graphical interfaces, with measurement curves for example. <br>
-				We then discovered and used the <b>oneM2M standard</b> which allows, through the use of REST queries, to create a very useful resource tree for the internet of objects, which allows to store both objects but also the data linked to it, via different entity levels. This standard will allow to centralize the information related to a network of connected objects.<br>
-				Finally, we used <b>Node-Red</b> and nodejs to create a gateway between the oneM2M standard and MQTT, with the creation of data entities to light lamps following different MQTT requests arriving on several topics. We can also note that node-red could have been used to create a dashboard to represent these different functions.<br>
-				We have therefore been able, through these different works, to take in hand many tools to represent and use networks of connected objects at the application level.<br>
+				<p align="justify">
+					During this course, we went through 4 tools used in internet of things : MQTT Protocol, Sierra Wireless MangOH, oneM2M and Node-Red.<br>
+					We initially took in hand <b>MQTT</b> and its mechanism of publish/subscribe to then set it up with an arduino to be able to light in LED via a broker and topic MQTT.<br>
+					In a second time, we were able to take in hand the <b>mangOH</b> cards of <b>Sierra Wireless</b>. This allowed us to see that there were microcontrollers that allowed us to perform many functions simply, all with access to a graphical interface with simple parameterization (creation of functions, activation of sensors, ...etc) but also dashboard-type graphical interfaces, with measurement curves for example. <br>
+					We then discovered and used the <b>oneM2M standard</b> which allows, through the use of REST queries, to create a very useful resource tree for the internet of objects, which allows to store both objects but also the data linked to it, via different entity levels. This standard will allow to centralize the information related to a network of connected objects.<br>
+					Finally, we used <b>Node-Red</b> and nodejs to create a gateway between the oneM2M standard and MQTT, with the creation of data entities to light lamps following different MQTT requests arriving on several topics. We can also note that node-red could have been used to create a dashboard to represent these different functions.<br>
+					We have therefore been able, through these different works, to take in hand many tools to represent and use networks of connected objects at the application level.<br>
 				</p>
 				<p class="text-right">
 					<a target="_blank" href="assets/reports/M2M_B1_Desportes_Imekraz_Report.pdf" class="btn btn-primary btn-xs">Link to Practical Work report >></a>
@@ -118,42 +115,47 @@
 
 				<h2>Service Oriented Architecture</h2>
 
-				<p align="justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
-				inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
-				quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-				adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum 
-				exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
-				esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+				<p align="justify">
+					This course allowed us to learn how to develop and implement a <b>service based architecture</b>. We learned how to implement web services, first based on a deployment on a <b>tomcat server</b> and using the <b>REST API</b>. We then used the <b>SpringBoot</b> framework to <b>automate</b> and simplify the development and <b>deployment</b> of these web services using the REST API.<br>
+					We have also learned how to <b>interconnect</b> these different services to enable the use of services in other services.<br><br>
+
+					In another part of the course, we learned how to implement <b>continuous integration</b> in our projects with the use of <b>Jenkins</b>. Through Jenkins, we were able to set up <b>unit test automation</b>, the use of <b>Git</b> and finally the <b>deployment</b> of different applications. We also learned how to set up <b>pipelines</b> to be able to carry out all these automation in a harmonized way.<br><br>
+
+					We were also introduced to <b>Jira</b> for project management. This tool will be used and further developed in the training unit project.<br>
 				</p>
 				
 				<h2>Project : Automation of the management of connected objects in a room</h2>
 
-				<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-				mollit anim id est laborum.
+				<p align="justify">
+					During this project, we will set up an <b>IoT platform</b> to <b>automate</b> the management of a classroom. The automation will be done on functions such as lighting, heating and door locking.<br>
+					We will use the <b>oneM2M</b> standard to <b>simulate</b> different sensors present in the classroom. <br>
+					For the use of these sensors and their management, we will use <b>web services</b> with <b>SpringBoot</b> to retrieve and process the various <b></b>data emitted by its simulated <b>sensors</b> to be able to perform actions based on threshold functions.<br>
+					We will, throughout the project, use <b>Jira</b> to allow a project management organized on the Scrum method, in agile, with spring of 2 weeks.<br>
 				</p>
 
 				<h3>Jira</h3>
 				
-				<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-				mollit anim id est laborum.
+				<p align="justify">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+					in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+					mollit anim id est laborum.
 				</p>
 
 				<h3>Service based Architecture</h3>
-				<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-				mollit anim id est laborum.
+				<p align="justify">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+					in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+					mollit anim id est laborum.
 				</p>
 
 				<h3>oneM2M</h3>
-				<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-				mollit anim id est laborum.
+				<p align="justify">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+					in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+					mollit anim id est laborum.
 				</p>
 
 				<h2>Developped skills and knowledge</h2>
@@ -171,7 +173,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				<p align="justify">During the practical work, we were able to carry out a theoretical analysis of what cloud computing and its various components (<b>SaaS, IaaS, PaaS</b>) were, as well as its link with <b>virtual machines</b> and <b>container</b> services.</p>
+				<p align="justify">
+					During the practical work, we were able to carry out a theoretical analysis of what cloud computing and its various components (<b>SaaS, IaaS, PaaS</b>) were, as well as its link with <b>virtual machines</b> and <b>container</b> services.
+				</p>
 
 				<ul><li>Use a IaaS-type cloud service
 					<i class="fa fa-check fa-5"></i>
@@ -180,7 +184,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				<p align="justify">We were able to take over and use the <b>OpenStack</b> platform, which allows us to create cloud environments (VM instances) in a simple way via an overlay on the server <b>infrastructure</b> (IaaS).</p>
+				<p align="justify">
+					We were able to take over and use the <b>OpenStack</b> platform, which allows us to create cloud environments (VM instances) in a simple way via an overlay on the server <b>infrastructure</b> (IaaS).
+				</p>
 
 				<ul><li>Deploy and adapt a cloud-based platform for IoT
 					<i class="fa fa-check fa-5"></i>
@@ -189,7 +195,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				<p align="justify">During tp, with openstack, we were able to set up a complete <b>cloud environment</b>, with an architecture containing several networks, to host and use several <b>microservices</b> that <b>interacted</b> with each other and with a user. </p>
+				<p align="justify">
+					During tp, with openstack, we were able to set up a complete <b>cloud environment</b>, with an architecture containing several networks, to host and use several <b>microservices</b> that <b>interacted</b> with each other and with a user.
+				</p>
 			
 				</div>
 				<hr size="10" color="black">
@@ -208,7 +216,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				<p align="justify">During this course, we were able to theoretically discover several standards both for the <b>management and representation of connected objects</b> or the <b>communication</b> between them. During the oneM2M MOOC we discovered several standards in a theoretical way. We were then able to use <b>MQTT</b> and <b>oneM2M</b> in more detail during the praticals works and the project.</p>
+				<p align="justify">
+					During this course, we were able to theoretically discover several standards both for the <b>management and representation of connected objects</b> or the <b>communication</b> between them. During the oneM2M MOOC we discovered several standards in a theoretical way. We were then able to use <b>MQTT</b> and <b>oneM2M</b> in more detail during the praticals works and the project.
+				</p>
 
 				<ul><li>Deploy an architecture compliant to an IoT standard and implement a sensor network
 					<i class="fa fa-check fa-5"></i>
@@ -217,7 +227,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				<p align="justify">We were able, both during a practical work and also during the project, to deploy a <b>connected object architecture</b> using the <b>oneM2M</b> standard and the <b>REST API</b>. Then, especially during the project, we set up services so that these objects could communicate and <b>interact</b> with each other.</p>
+				<p align="justify">
+					We were able, both during a practical work and also during the project, to deploy a <b>connected object architecture</b> using the <b>oneM2M</b> standard and the <b>REST API</b>. Then, especially during the project, we set up services so that these objects could communicate and <b>interact</b> with each other.
+				</p>
 
 				<ul><li>Deploy and configure and IoT architecture using OM2M
 					<i class="fa fa-check fa-5"></i>
@@ -226,7 +238,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				<p align="justify">During the project, we were able to implement a <b>simulated IoT sensor architecture</b> using the oneM2M standard. These sensors were arranged in different rooms and had <b>containers</b> for the different <b>data</b> they sent. These different data were represented by <b>content instances</b>. This allowed a clear, precise and functional representation of the simulated <b>sensor network</b> that we wanted to implement. </p>
+				<p align="justify">
+					During the project, we were able to implement a <b>simulated IoT sensor architecture</b> using the oneM2M standard. These sensors were arranged in different rooms and had <b>containers</b> for the different <b>data</b> they sent. These different data were represented by <b>content instances</b>. This allowed a clear, precise and functional representation of the simulated <b>sensor network</b> that we wanted to implement.
+				</p>
 
 				<ul><li>Interact with the different resources of the architecture using REST services
 					<i class="fa fa-check fa-5"></i>
@@ -235,7 +249,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				<p align="justify">To communicate with the different connected objects of the architecture, we had to use <b>REST services</b> to access the different content instances of the sensors (the last data collected by this sensor) and allow to perform different actions. We also used the <b>REST API</b> to implement this sensor architecture.</p>
+				<p align="justify">
+					To communicate with the different connected objects of the architecture, we had to use <b>REST services</b> to access the different content instances of the sensors (the last data collected by this sensor) and allow to perform different actions. We also used the <b>REST API</b> to implement this sensor architecture.
+				</p>
 
 				<ul><li>Integrate a new technology into the deployed architecture
 					<i class="fa fa-check fa-5"></i>
@@ -244,7 +260,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				<p align="justify">During the last practical work, we were able to make the two standards <b>MQTT</b> and <b>oneM2M</b> interact with <b>node-red</b> to allow actions in the oneM2M architecture on data reception in some MQTT topics. However, we did not integrate new technologies in the project, we only used oneM2M with REST services.</p>
+				<p align="justify">
+					During the last practical work, we were able to make the two standards <b>MQTT</b> and <b>oneM2M</b> interact with <b>node-red</b> to allow actions in the oneM2M architecture on data reception in some MQTT topics. However, we did not integrate new technologies in the project, we only used oneM2M with REST services.
+				</p>
 
 				</div>
 				<hr size="10" color="black">
@@ -263,7 +281,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+				<p align="justify">
+					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				</p>
 
 				<ul><li>Deploy an SOA with web services
 					<i class="fa fa-check fa-5"></i>
@@ -272,7 +292,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 
-				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+				<p align="justify">
+					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				</p>
 
 				<ul><li>Deploy and configure an SOA using SOAP
 					<i class="fa fa-check fa-5"></i>
@@ -281,7 +303,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+				<p align="justify">
+					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				</p>
 
 				<ul><li>Deploy and configure an SOA using REST
 					<i class="fa fa-check fa-5"></i>
@@ -290,7 +314,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+				<p align="justify">
+					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				</p>
 
 				<ul><li>Integrate a process manager in an SOA
 					<i class="fa fa-check fa-5"></i>
@@ -299,7 +325,9 @@
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				<p align="justify">Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
+				<p align="justify">
+					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				</p>
 
 				</div>
 				<hr size="10" color="black">
