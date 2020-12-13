@@ -63,14 +63,23 @@
 		<div class="row">
 			
 			<!-- Sidebar -->
-			<aside class="col-md-4 sidebar sidebar-left">
+			<aside class="col-md-3 sidebar sidebar-left">
 
 				<div class="row widget">
 					<div class="col-xs-12">
 						<h4>Smart Devices</h4>
 						<p align="justify">
-							The goal of this project was to follow the entire creation process of a sensor. From the manufacturing to the datasheet writting.
-							During this project, we have created and used a nano-particle sensor.
+							The goal of this project was to follow the entire creation process of a sensor and its deployment. From the manufacturing to the usage into an IoT environment.<br><br>
+							During this project, we have created our own nano-particles sensor, then we have used in to create a complete sensor usable into an IoT environment.<br>
+							So we had to 'surround' this sensor with several components to allow it to be usable by a card, which will then be able to communicate 
+							the different measurements made by this sensor.<br>
+							This means we had to create a PCB to integrate the sensor, then integrate a communication module, allowing the use of LoRa protocol, to send this data.<br>
+							We have also created a signal adaptation stage to allow our PCB to retrieve the correct information at the output of our sensor. <br>
+							At the very end of the project, we also used Node-Red to create a really simple GUI to to allow the user of the sensor to have access 
+							in a simple and user-friendly way to the different measurements made by the sensor.<br><br>
+
+							<img src="assets/images/bob.png" alt="" class="img-rounded center-block">
+
 						</p>
 					</div>
 				</div>
@@ -78,51 +87,117 @@
 			<!-- /Sidebar -->
 
 			<!-- Article main content -->
-			<article class="col-md-8 maincontent">
+			<article class="col-md-9 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Smart Devices</h1>
 				</header>
 
-				<p align="justify">
-					
-					<img src="assets/images/bob.png" alt="" class="img-rounded pull-right" width="150">
-
-					Résumé du projet | contexte | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, itaque, cumque, maxime obcaecati reprehenderit ea dignissimos amet voluptatem id excepturi facilis totam veritatis maiores eveniet neque explicabo temporibus quisquam in ex ab fugiat ipsa tempore sunt corporis nostrum quam illum!
-				
-				</p>
-
 				<h2>Sensor Manufacturing</h2>
 				<h3>WO<sub>3</sub> nanoparticle synthesis</h3>
 
-				<p align="justify">A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?</p>
+				<p align="justify">
+					
+					We first prepared the solution containing the <b>tungsten trioxide nanoparticles</b> (WO<sub>3</sub>). 
+					We were able to <b>synthesize</b> these molecules from a chemical reaction, all in an aqueous medium, to <b>limit the risks</b> associated with nanoparticles 
+					(both dust and dispersion in the water network by the uncontrolled solution).<br><br>
+					We followed a protocol which aimed, in addition to producing these molecules of tungsten trioxide, to <b>limit the ecological impact</b> of this synthesis, mainly by <b>limiting the waste</b> related to this procedure (in particular by optimizing the fact that several groups carry out the same procedure, and thus limit to the maximum the rinsing (and thus the generation of waste related to this rinsing (dirty water) of the tools).<br><br>
+					
+					The whole procedure to create the nanoparticles in the solution is presented here :
+
+					<button id="btnSynth" class="btn btn-primary btn-xs" onclick="affichManipul('btnSynth','divSynth','procedure')">
+						Show procedure
+					</button>
+					<div id="divSynth" style="display: none"><br>
+						<img src="assets/images/wo3_synth.PNG" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+					</div>
+
+					Once these nanoparticles were created, it was necessary to organize them in the form of <b>nanotubes</b> to be able to deposit them on the interdigital combs on the sensor (this will be developed in the next part).<br><br>
+
+					The whole procedure to make the nanoparticles growth is presented here :
+
+					<button id="btnGrowth" class="btn btn-primary btn-xs" onclick="affichManipul('btnGrowth','divGrowth','procedure')">
+						Show procedure
+					</button>
+					<div id="divGrowth" style="display: none"><br>
+						<img src="assets/images/wo3_synth.PNG" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+					</div>
+
+
+				</p>
 
 				<h3>Elaboration of the microelectronic chip</h3>
 				
 				<p align="justify">
 
-					<img src="assets/images/photogravure_debut.PNG" alt="" class="img-rounded pull-left" width="150">
-					
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
-					<br>
-					
-					<img src="assets/images/photogravure_final.PNG" alt="" class="img-rounded pull-right" width="150">
+					<img src="assets/images/capteur.PNG" alt="" class="img-rounded pull-right" width="200">
 
+					We then had to proceed with the creation of the sensor chip itself, the one that would host our solution containing the nanoparticles.
+					The sensor is composed of 3 parts: a <b>heating resistor</b> made of doped poly-silicon (2-7 on the image), an <b>aluminium resistor</b> (4-5 on the image) for heating or measurement, and two <b>interdigital combs</b> (one on each side, 1-3 and 6-8 on the image) which will receive the layer of nanoparticles and which will then become our <b>resistors sensitive</b> to the gaseous environment (which will therefore make the gas sensor work).
+					<br><br>
+					Several steps in the chip creation process had already been completed when we recovered the chip, such as <b>polysilicon deposition</b>, <b>doping</b> and <b>etching</b>, <b>dry oxide deposition</b> and <b>photo-etching</b>, and <b>metallization</b>.<br><br>
+
+					
+					<img src="assets/images/photogravure_debut.PNG" alt="" class="img-rounded pull-left" width="150">
+					So the chip had this cut when we started working on it.<br><br>
+					We had to do the <b></b>metal etching, that is to say, remove, by <b></b>photo-engraving, the aluminium where it is not necessary (to obtain the comb shapes we wanted). 
+					<img src="assets/images/photogravure_final.PNG" alt="" class="img-rounded pull-right" width="150">
+					We will use a <b>resin that reacts to light</b> and will <b>attack the aluminum</b> in places where we do not want it. We will <b>protect</b> the parts to keep with an <b>'optical' mask</b> that will block the light in these places. 
+					We will then <b>chemically remove</b> the resin from the remaining areas. 
+					<br><br>
+					The whole procedure for the metal gravure is presented here :
+
+					<button id="btnMetalG" class="btn btn-primary btn-xs" onclick="affichManipul('btnMetalG','divMetalG','procedure')">
+						Show procedure
+					</button>
+					<div id="divMetalG" style="display: none"><br>
+						<img src="assets/images/gravure_metal.PNG" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+					</div>
 					<br>
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
-				
+					The <b>metal annealing</b> will then be made by putting the chip into a 400°C oven during 20mn.<br><br>
+
+					The microelectronic chip is now ready to <b>host the nanoparticle solution</b>.
 				</p>
 
 				<h3>Integration of the sensitive layer of nanoparticles on the chip</h3>
 
 				<p align="justify">
 
-					<img src="assets/images/dielectrophoresis.PNG" alt="" class="img-rounded pull-left" width="150">
-					
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
 
+					<img src="assets/images/wedgebonding.PNG" alt="" class="img-rounded pull-left" width="150">
+
+					For the integration of the nanoparticles into the sensor, we will use <b>dielectrophoresis</b>.<br>
+
+					Before that, however, we need to make a <b>wedge bonding</b> with aluminum-silicon wires, which will allow us to integrate our chip into a <b>larger sensor</b>, so that we can easily handle it (especially via <b>pins</b> that can be <b>electrically connected easily</b>).<br>
+					
+					Because of the high precision (wires of about 25 micrometers in diameter) of the handling, it is a speaker from the AIME laboratory who realized for us this wedge bonding.<br>
+
+					The result can be seen on the left image.<br><br>
+
+					<img src="assets/images/dielectrophoresis.PNG" alt="" class="img-rounded pull-right" width="150">
+					
+					Once the different pins were connected and accessible, we were able to perform <b>dielectrophoresis</b>.<br>
+
+					We had to connect the pins of the interdigital comb, then deposit a drop of our <b>nanoparticle solution</b> on the sensor.We then had to pass an <b>electric current</b> for one minute.
+
+					Our particles will, thanks to the <b>dielectrophoretic force</b>, integrate on our interdigital comb, connected to the electric current.<br>
+
+					Then, after the minute but still with the current, we had to rinse the sensor with water, and absorb, with a piece of dry tissue, the excess rinsing water. Once this is finished, 
+					we can cut off the electric current.<br><br>
+
+					The whole procedure for the dielectrophoresis is presented here :
+					<button id="btnDielec" class="btn btn-primary btn-xs" onclick="affichManipul('btnDielec','divDielec','procedure')">
+						Show procedure
+					</button>
+					<div id="divDielec" style="display: none"><br>
+						<img src="assets/images/dielectrophoresis_protocol.PNG" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+					</div>
 				</p>
 
+				<br>
 				<h3>Electrical characterization of the sensor under controlled atmosphere</h3>
 
 				<p align="justify">
