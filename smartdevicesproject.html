@@ -92,7 +92,11 @@
 					<h1 class="page-title">Smart Devices</h1>
 				</header>
 
-				<h2>Sensor Manufacturing</h2>
+				<h2>Sensor Manufacturing at AIME</h2>
+
+				A AJOUTER !!<br><br>
+				The work to be done for this training-unit being the sensor datasheet, it is accessible by clicking here : 
+				<a href="assets/cv.kilian.desportes.pdf" target="_blank" class="btn btn-primary btn-xs">See Datasheet ></a>
 				<h3>WO<sub>3</sub> nanoparticle synthesis</h3>
 
 				<p align="justify">
@@ -202,17 +206,39 @@
 
 				<p align="justify">
 
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
+					Once the chip was completed and the nanoparticles integrated into it, we had to <b>characterize</b> it electrically. First, we took measurements in a <b>conventional</b> environment 
+					to find out the <b>resistances</b> of the different sensor elements.<br><br>
+					
+					The procedure to carry out these measurements is detailed here: 
+					<button id="btnCarac1" class="btn btn-primary btn-xs" onclick="affichManipul('btnCarac1','divCarac1','procedure')">
+						Show procedure
+					</button>
+					<div id="divCarac1" style="display: none"><br>
+						<img src="assets/images/characterization_base.PNG" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+					</div>
+
+					In a second step, we had to measure the <b>variation</b> of this resistance when the environment of the sensor contains <b>gases</b> that react with these 
+					nanoparticles in order to know how our sensor works.<br>
+
+					For this, we followed a <b>characterization</b> procedure in a <b></b>controlled environment, with alternating <b>pure synthetic air</b> and air loaded 
+					with gas (<b>ethanol</b> then <b>ammonium</b>).<br>
+					
+					The procedure for characterization in <b>controlled</b> atmosphere is this one:
 
 					<img src="assets/images/characterization_protocol.PNG" alt="" class="img-rounded center-block" width="600">
 
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
+					Thanks to this characterization in a controlled atmosphere, we were able to observe the <b>resistance variations</b> according to the presence of this or that gas, 
+					as well as the capacity of our sensor to <b>regenerate</b> between two measurements.<br>
+
+					We can see, on the graph below, that the presence of ethanol causes less variation than ammonia, which will take longer to regenerate.
 
 					<img src="assets/images/characterization_250c.PNG" alt="" class="img-rounded center-block" width="600">
 
+					Our sensor is now, after this characterization procedure, <b>ready</b> to be used, as we are sure that <b>it is working</b> and <b>how it is working</b>.
 				</p>
 
-				<h2>Integration of the sensor into an IoT archictecture</h2>
+				<h2>Making our sensor a Smart Device for IoT</h2>
 
 				<h3>Design of the sensor's signal conditioner</h3>
 
