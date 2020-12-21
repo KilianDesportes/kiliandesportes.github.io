@@ -136,26 +136,60 @@
 				<h3>Jira</h3>
 				
 				<p align="justify">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-					in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-					mollit anim id est laborum.
-				</p>
+					We had to practice Scrum project management method during this project. To do this, we used Jira tool, which allow to organize your project into sprints. <br>
+					Firstly, we wrote the specifications and user stories for our application and the tasks to achieve these. We then organised these tasks into different sprint, each one containing different specifications and user stories.
+					We planned our sprint during the first project session.
 
-				<h3>Service based Architecture</h3>
-				<p align="justify">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-					in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-					mollit anim id est laborum.
+					All the sprints and their content are visible here :<br>
+					<div class="text-right">
+						<button id="btnSprint" class="btn btn-primary btn-xs" onclick="affichManipul('btnSprint','divSprint','sprints')">
+							Show sprints
+						</button>
+					</div>
+					<div id="divSprint" style="display: none"><br>
+						<img src="assets/images/sprint1.png" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+						<img src="assets/images/sprint2.png" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+						<img src="assets/images/sprint3.png" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+						<img src="assets/images/sprint4.png" alt="" class="img-rounded center-block">
+						<hr size="10" color="black">
+					</div>
 				</p>
 
 				<h3>oneM2M</h3>
 				<p align="justify">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-					in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-					mollit anim id est laborum.
+					To simulate every sensors and actuators of our room to manage, we used an oneM2M ressource tree. We create, in this ressource tree, every sensor we needed and the "objects" we needed to manage.
+					We regroup sensors below a "Sensor_Platform" entity and objects below a "Objet_Platform" entity. Each sensor/actuators had a data container to store it's value and state.
+					To create this platform, we used Java REST requests. We integrete these requests in our web services application code to be able to rebuild the platform easily (more easily than if we had to use classic REST client and resend every request to the platform).<br><br>
+
+					Here is the ressource tree of our platform :<br><br>
+					<img src="assets/images/om2m.png" alt="" class="img-rounded center-block">
+				</p>
+
+				<h3>Service based Architecture</h3>
+				<h4>Web services</h4>
+					<p align="justify">
+						We had to use web services to manage our objects with our sensors. We created 3 types of service : getters, setters and a 'summary'.<br>
+						The getter services where used to get the value of a sensor by using their name, like this :<br><br>
+						<img src="assets/images/TempServiceResult.png" alt="" width="500" class="img-rounded center-block"><br><br>
+						Setter services are used to push a value into a sensor. This is useful because our sensors are simulation and do not get their value by their selves. So we needed this type of services to simulate properly. It is also in this services that we will treat the value of the sensor to know if an action should be taken on object, like closing the door and window if the outside temperature is too low.<br><br>
+						<img src="assets/images/TempServiceSet.png" alt="" width="500" class="img-rounded center-block"><br><br>
+						We also create a 'summary' service that worked as an interface, to see every sensor values and actuator states :<br><br>
+						<img src="assets/images/RessourceServiceResult.png" alt="" width="500" class="img-rounded center-block"><br><br>
+					</p>
+				<h4>Unit test and GUI</h4>
+				<p align="justify">
+					Once our architecture and web services were ready, we created JUnit test to allow us to see if every predicted case were sucessfuly managed.
+					These tests were useful because it allow us to see some bugs and omissions we did not seen before.
+					Once these bugs fixed, every test were sucessful and we knew our application was completed.<br><br>
+					<img src="assets/images/tests.png" alt="" width="500" class="img-rounded center-block"><br><br>
+
+					To complete the application, we decided to create a GUI.
+					This inteface will be used to set values of sensor and see the impact it has on the different objects.
+
+					!! PUT IMAGE OF GUI HERE !!
 				</p>
 
 				<h2>Developped skills and knowledge</h2>
@@ -282,7 +316,7 @@
 				</li></ul>
 
 				<p align="justify">
-					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+					During the lectures, practical works and project, we learnt what is a <b>service oriented architecture</b>, with multiples <b>web services</b> that are regrouped into the same <b>web application</b> but that doesn't require others to work (except in the case where a web service is using another web service). This allows the application to be strongly <b>modular</b>.
 				</p>
 
 				<ul><li>Deploy an SOA with web services
@@ -293,7 +327,7 @@
 				</li></ul>
 
 				<p align="justify">
-					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+					During practical work and project, using <b>Java Spring Boot</b> and <b>REST API</b>, we learnt to deploy a <b>service oriented architecture</b> that contains multiple <b>web services</b>. We also learnt how to <b>interact</b> between these multiple services, like calling one into another.
 				</p>
 
 				<ul><li>Deploy and configure an SOA using SOAP
@@ -304,7 +338,7 @@
 				</li></ul>
 				
 				<p align="justify">
-					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+					During the first practical works, we had to configure and deploy web services using <b>SOAP</b>. We used the <b>WSDL</b> document to create it, setting its <b>port</b>, <b>name</b>, <b>parameters</b> and <b>response type</b>. Once the configuration done and the service written, we could <b>deploy</b> it on our <b>Tomcat Server</b>.
 				</p>
 
 				<ul><li>Deploy and configure an SOA using REST
@@ -315,18 +349,19 @@
 				</li></ul>
 				
 				<p align="justify">
-					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+					During the pratical works, firstly, we created and deployed <b>REST webservice</b>  thanks to <b>Java REST annotations</b> (Get, Produces, Path,...).
+					We were able to work with both 'simple' data types and also <b>json</b> structures to use our services. At the end of the practical works, and during the project, we continued to use <b>REST API</b> but this time we used <b>SpringBoot</b> to deploy our application, instead of deploying it with a Tomcat Server.
 				</p>
 
 				<ul><li>Integrate a process manager in an SOA
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:red" class="fa fa-check fa-5"></i>
+					<i style="color:red" class="fa fa-check fa-5"></i>
+					<i style="color:red" class="fa fa-check fa-5"></i>
+					<i style="color:red" class="fa fa-check fa-5"></i>
 				</li></ul>
 				
 				<p align="justify">
-					Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+					We did not use a <b>process manager</b> in practical works or during project.
 				</p>
 
 				</div>
