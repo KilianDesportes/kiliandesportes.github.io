@@ -12,18 +12,16 @@
 	
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="assets/css/main.css">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+    <script src="assets/js/script_perso.js"></script>
 </head>
 
 <body>
@@ -59,26 +57,20 @@
 		<div class="row">
 			
 			<!-- Sidebar -->
-			<aside class="col-md-4 sidebar sidebar-left">
+			<aside class="col-md-3 sidebar sidebar-left">
 
 				<div class="row widget">
 					<div class="col-xs-12">
-						<h4>Innovative Project</h4>
-						<p>Description.
+						<h4>Summary</h4>
+						<p align="justify">
+							During the whole semester, we had to work, in groups of students from different specialties, on an innovative project related to the Internet of Things. 
+							Our subject, named "Edge Computing Car Park", had as a goal to propose an application to easily find parking spaces on the INSA campus.
+							To do this, we were asked to use cameras and image recognition to detect free parking spaces, then format and make this information accessible.
+							We shared the work between each member of the group and I will present here the work I personally did.
+
+							<br><br><i class="fa fa-gitlab fa-5"></i> <a target="_blank" href="https://gitlab-rech.insa-toulouse.fr/monteil/edge-computing-for-car-park">Gitlab</a><br><span class="small text-muted">Gitlab of the project</span>
+							
 						</p>
-					</div>
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>part 1</h4>
-						<p><img src="assets/images/1.jpg" alt=""></p>
-					</div>
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>part 2</h4>
-						<p><img src="assets/images/2.jpg" alt=""></p>
-						<p>Qui, debitis, ad, neque reprehenderit laborum soluta dolor voluptate eligendi enim consequuntur eveniet recusandae rerum? Atque eos corporis provident tenetur.</p>
 					</div>
 				</div>
 
@@ -86,74 +78,125 @@
 			<!-- /Sidebar -->
 
 			<!-- Article main content -->
-			<article class="col-md-8 maincontent">
+			<article class="col-md-9 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Innovative Project.</h1>
+					<h1 class="page-title">Innovative Project - Edge Computing Car Park</h1>
 				</header>
-				<p>Résumé du projet | contexte | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, itaque, cumque, maxime obcaecati reprehenderit ea dignissimos amet voluptatem id excepturi facilis totam veritatis maiores eveniet neque explicabo temporibus quisquam in ex ab fugiat ipsa tempore sunt corporis nostrum quam illum!</p>
-				<p>Consectetur cupiditate labore repudiandae beatae nisi fugiat facilis natus illum vitae doloremque. In, perspiciatis, natus, impedit voluptas itaque odio repudiandae placeat nisi totam repellendus earum dolores mollitia tempore quasi beatae alias cum dicta maxime laborum corporis harum porro magnam laboriosam.</p>
-				<p>Aut, eaque, minus atque alias odio mollitia cum nisi ipsa nulla natus quae minima similique ipsam aspernatur molestias animi in deleniti nam. Tempora, labore, modi eum perspiciatis doloremque sequi nam illo corporis iusto maiores nisi recusandae repellat animi reiciendis accusamus.</p>
 
-				<h2>Sensor Manufacturing</h2>
-				<p>A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?</p>
-				<p>Ad velit consequuntur quo qui odit quam sapiente repudiandae et ea pariatur? Ex sapiente beatae nobis consectetur ea. Deleniti, beatae, magnam, dolorum, fuga nostrum quas laboriosam sapiente temporibus enim voluptates ullam impedit atque quae provident quos mollitia aperiam perferendis amet.</p>
+				<p align="justify">
+					The goal of our semester project was to propose a solution to find free <b>parking spaces</b> on campus. We used <b>cameras</b> filming the parking spaces and then applied an <b>image recognition algorithm</b> on these videos. This allows us to detect free parking spaces, then, using a <b>server</b>, we communicate this data to a <b>mobile application</b>, also developed by our team.<br>
+					For this project, we worked in a <b>team of 6</b>, divided into two subteams of 3, one for the <b>image acquisition</b> and <b>recognition</b> part, the other on the <b>application</b>.<br>
+					I was personally in the image acquisition and recognition team, in charge of implementing the <b>free space detection algorithm</b> and <b>formatting</b> the data for sending. On this page, I will develop a little more in depth all that relates to the <b>organization</b> of the project and also to the <b>technical part</b> that I realized.<br>
+					<br>
+					We had to realize a project report as well as a final oral, both supports are present below:
 
-				<h2>Datasheet specifications</h2>
-				<h3>Numquam, ut iure quia facere totam quas odit illo incidunt</h3>
-				<p>Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
-				<p>Dignissimos, beatae, praesentium illum eos autem perspiciatis? Minus, non, tempore, illo, mollitia exercitationem tempora quas harum odio dolores delectus quidem laudantium adipisci ducimus ullam placeat eaque minima quae iure itaque corporis magni nesciunt eius sed dolor doloremque id quasi nisi.</p>
-			
+					<p class="text-right">
+						<a target="_blank" href="" class="btn btn-primary btn-xs">Link to the oral presentation >></a>
+					</p>
+					<p class="text-right">
+						<a target="_blank" href="" class="btn btn-primary btn-xs">Link to the report >></a>
+					</p>
+				</p>
+
+				<h2>Project Management and Organization</h2>
+
+				<p align="justify">
+					Concerning the <b>project organization</b>, we worked with the <b>agile method</b> throughout the project. This method allows us to have a <b>close contact</b> with the <b>client</b> to allow us to develop an application that <b>suits him</b>. So we had to plan <b>weekly meetings</b> to get <b>feedback</b> on what we were doing. Our client being also our <b>technical tutor</b>, these meetings also allowed us, especially at the beginning of the project, to have an informed opinion on the <b>technologies</b> we were going to use, as they were not imposed.<br><br>
+					For the distribution of work within the group, we were asked to each work on a <b>specific part</b> of the project, in order to <b>integrate</b> our work at the end. This working method may not seem to be in line with the agile previously mentioned, but our project was better suited to this type of planning, given the different parts to be developed and the 'little' functionality we had to achieve.
+					We separated the project into two main parts, <b>image acquisition</b> and <b>recognition</b>, and the <b>mobile application</b>. Two groups of 3 students working on each part. The more precise task distribution was then done within these two subgroups, and I personally had as a task the part on <b>image recognition</b> concerning whether the places were free or not, as well as the <b>formatting</b> of this information. My work was between Teo, in charge of detecting the parking places (my input) and Yanis, in charge of the communication and server part, which used my formatted information (my output).<br>
+					Concerning my own <b>organisation</b>, I tried as much as possible to set a new goal <b>each week</b> to move forward, as the <b>weekly meetings</b> with the client went on. This organization was sometimes modified according to the work of others member of the team or other projects (related to other classes) that we had to carry out.
+				</p>
+				
+				<h2>Technical Development</h2>
+
+				<p align="justify">
+					During this project, I had to work on the <b>technical</b> part related to the <b>detection of free places</b> or not. 
+					I had as input data the <b>coordinates</b> of the parking spaces in the image, in real time, work done by Teo. And I had to create a <b>JSON</b> file containing the different parking places and their <b>status</b> (free or not).<br>
+					<br>
+					I based myself on a code produced by olgarose on GitHub: <a href="https://github.com/olgarose/ParkingLot">https://github.com/olgarose/ParkingLot</a> <i class="fa fa-github fa-5"></i>.<br>
+					This code, written in <b>Python</b>, allows you to <b>detect</b> parking spaces by hand from an image, then perform a <b>detection</b> of the parking spaces thanks to an image processing realized with the <b>OpenCV</b> library. The recognition is performed thanks to a <b>series of functions</b> that <b>eliminate noise</b>, <b>smooth</b> the image and then <b>detect the curves</b> inside the place selected later.<br>
+					So I <b>adapted</b> this code to add several features.<br> 
+					<br>
+					At first, I had to change the way <b>parking places</b> were given as input, as <b>manual detection</b> was absolutely not satisfactory for <b>automated</b> use.<br>
+					So I adapted the code inputs to allow me to give a <b>file</b> in which the <b>coordinates</b> of the different places are written, instead of giving an image for detection, which will replace the manual selection phase.<br> 
+					<br>
+					For a <b>debug</b> mode where the coordinates would be badly detected, I still kept the manual mode by modifying it so that instead of using an image as input, I can use the <b>first image</b> of the video stream provided. This allows to <b>minimize</b> the number of inputs on the code.<br>
+					<br>
+					Once the <b>input</b> part was managed, I had to add different <b>outputs</b>, the code detecting parking spaces had no real output, as the output was a <b>visual modification</b> of the video (green parking places for the free places, blue is they are not). 
+					As this was not adapted to our use, I added a <b>writing</b> in a <b>JSON</b> file, a file that <b>evolves</b> in <b>real time</b> according to the <b>current state</b> of the parking spaces.<br> 
+					<br>
+					Once this code was done, with the necessary inputs and outputs, I had to move on to <b>deploying</b> it on the <b>NVIDIA Jetson Nano</b> card. This board needed a <b>basic configuration</b>, which I made, with the installation of an <b>Operating System</b>. For this I simply followed the different instructions on the NVIDIA website.<br>
+					Once the board was ready, I had to <b>configure</b> and <b>run</b> the <b>Raspberry Pi camera</b>. I tested this camera thanks to different test codes provided by <b>Raspberry Pi</b>.<br> 
+					Once the tests were completed, I was able to <b>integrate</b> the camera into the code I had developed, by passing the <b>live video stream</b> as input instead of the mp4 videos I was used to working with. 
+					The integration went smoothly and the <b>stream</b> was well managed. 
+				</p>
+
 				<h2>Developped skills and knowledge</h2>
-				<h3>Numquam, ut iure quia facere totam quas odit illo incidunt</h3>
-				<p>Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.</p>
-				<p>Dignissimos, beatae, praesentium illum eos autem perspiciatis? Minus, non, tempore, illo, mollitia exercitationem tempora quas harum odio dolores delectus quidem laudantium adipisci ducimus ullam placeat eaque minima quae iure itaque corporis magni nesciunt eius sed dolor doloremque id quasi nisi.</p>
 
 				<h3>Manage an innovative project</h3>
 
-				<br><br><ul><li>Analyse a real-life problem
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-				</li></ul>
-				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				<button id="btnManagePro" class="btn btn-primary btn-sm" onclick="affichManipul('btnManagePro','divManagePro','skills')">
+					Show skills
+				</button>
+				<div id="divManagePro" style="display: none"><br>
 
-				<br><br><ul><li>Suggest a technological solution to a problem
+				<ul><li>Analyse a real-life problem
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				<p align="justify">
+					During this project, we had to <b>analyze a problem</b>, the loss of time to look for a <b>parking space</b>, and propose a <b>solution</b> to <b>solve</b> this problem.
+				</p>
 
-				<br><br><ul><li>Implement a prototype to solve the problem
+				<ul><li>Suggest a technological solution to a problem
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
-				
-				<br><br><ul><li>Present and debate (in English) the technical choice made
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-				</li></ul>
-				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				<p align="justify">
+					We proposed a <b>solution</b> to this problem thanks to a <b>complete architecture</b> allowing to <b>find parking spaces</b>. This complete architecture includes <b>cameras</b> filming the spaces, <b>analysis algorithms</b>, a <b>server</b> for <b>communication</b> and <b>storage</b>, and an <b>application</b> to make the <b>information</b> available.
+				</p>
 
-				<br><br><ul><li>Produce a report (in English) for the developed project
+				<ul><li>Implement a prototype to solve the problem
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 				</li></ul>
 				
-				Est, maiores, fuga sed nemo qui veritatis ducimus placeat odit quisquam dolorum. Rem, sunt, praesentium veniam maiores quia molestias eos fugit eaque ducimus veritatis provident assumenda. Quia, fuga, voluptates voluptatibus quis enim nam asperiores aliquam dignissimos ullam recusandae debitis iste.
+				<p align="justify">
+					Thanks to the <b>camera</b> we used, we were able to set up a <b>prototype</b> to <b>detect</b> and <b>communicate</b> to the application the places available on the campus. 
+				</p>
+				
+				<ul><li>Present and debate (in English) the technical choice made
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+				
+				<p align="justify">
+					During the <b>oral</b> to present our project at the end of the year, we present the <b>technical choices</b> we made for this project, and explain <b>why</b> those and not others.
+				</p>
+
+				<ul><li>Produce a report (in English) for the developed project
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+					<i class="fa fa-check fa-5"></i>
+				</li></ul>
+				
+				<p align="justify">
+					Throughout the project, we wrote a <b>project report</b> that explains <b>how we work</b> and the <b>work</b> we did.
+				</p>
+
+			</div>
+			<hr size="10" color="black">
 
 			</article>
 			<!-- /Article -->
