@@ -247,9 +247,9 @@
 
 				<p align="justify">
 
-					In order to be able to integrate our sensor to an electronic board, we had to realize a signal conditioner. This one was going to allow to modify the current to increase it because of the great resistance that represents our gaz sensor.<br>
+					In order to be able to <b>integrate</b> our sensor to an <b>electronic board</b>, we had to realize a <b>signal conditioner</b>. This one was going to allow to <b>modify</b> the current to increase it because of the great <b>resistance</b> that represents our gaz sensor.<br>
 					<br>
-					This great resistance made the sensor unusable with an Arduino board, a board we have to use for the communication part, developed later. So we had to adapt the current, thanks to this circuit:<br>
+					This great resistance made the sensor unusable with an <b>Arduino</b> board, a board we have to use for the <b>communication</b> part, developed later. So we had to adapt the current, thanks to this <b>circuit</b> :<br>
 					<br>
 					<img src="assets/images/adaptivecircuit.png" alt="" class="img-rounded center-block" width="95%">
 
@@ -259,23 +259,25 @@
 
 				<p align="justify">
 
-					Once this adaptor circuit had been designed and tested using simulation tools, we had to build a shield that would accommodate all the elements of our final architecture. We will therefore create this shield thanks to KiCad. We have integrated both this circuit and the chip used to communicate the data (RN2483 chip) and to connect our gas sensor to the shield.
-
-					<img src="" alt="" class="img-rounded center-block" width="">
-
+					Once this <b>adaptor circuit</b> had been designed and tested using <b>simulation tools</b>, we had to build a <b>shield</b> that would accommodate all the elements of our final architecture. We will therefore create this shield thanks to <b>KiCad</b>. We have integrated both this <b>circuit</b> and the <b>chip</b> used to communicate the data (RN2483 chip) and to connect our <b>gas sensor</b> to the shield.<br>
+					<br>
+					<img src="assets/images/kicad.PNG" alt="" class="img-rounded center-block" width="90%">
+					<br>
+					<img src="assets/images/kicadd.PNG" alt="" class="img-rounded center-block" width="90%">
+					<br>
 				</p>
 
 				<h3>Arduino Uno for LoRa communication and sensor integration</h3>
 
 				<p align="justify">
 
-					We then became interested in the communication we needed to put in place to allow our sensor to be used in an IoT environment. We used an arduino for the 'test' phase and a RN2483 chip for the communication itself. We had to solder this chip to allow it to be connected to our card (at the beginning, arduino, then, at the end, our own shield). We then used arduino code and the TTN library (TheThingsNetwork) made our card communicate with a given gateway. We were able to send measurements every X seconds and retrieve them from the TTN site.<br>
+					We then became interested in the <b>communication</b> we needed to put in place to allow our sensor to be used in an <b>IoT environment</b>. We used an <b>Arduino</b> for the 'test' phase and a <b>RN2483 chip</b> for the communication itself. We had to solder this chip to allow it to be connected to our card (at the beginning, arduino, then, at the end, our own shield). We then used arduino code and the <b>TTN</b> library (TheThingsNetwork) made our card communicate with a given <b>gateway</b>. We were able to send <b>measurements</b> every X seconds and retrieve them from the TTN site.<br>
 					<br>
 					<img src="assets/images/DataReception.PNG" alt="" class="img-rounded center-block" width="80%">
 					<br>
-					We also had to take into account the energy consumption of our system, and therefore put the various components on standby when we did not need to use them, in particular the antenna during the measurement phases (and therefore non-transmission), as well as putting the sensor on standby during the transmission phases, and therefore non-measurement.<br>
+					We also had to take into account the <b>energy consumption</b> of our system, and therefore put the various components on <b>standby</b> when we did not need to use them, in particular the <b>antenna</b> during the <b>measurement</b> phases (and therefore non-transmission), as well as putting the <b>sensor</b> on standby during the <b>transmission</b> phases, and therefore non-measurement.<br>
 					<br>
-					The arduino code allowing to realize the measurement and the sending with a reduced energy consumption can be visualized <a href="assets/reports/data_sensor.ino" target="_blank">here</a>.
+					The <b></b>arduino code allowing to realize the measurement and the sending with a reduced energy consumption can be visualized <a href="assets/reports/data_sensor.ino" target="_blank">here</a>.
 
 				</p>
 
@@ -283,16 +285,16 @@
 
 				<p align="justify">
 
-					Once all the measurement and communication to the gateway was done, we had to realize the 'interface' part. We used node-red to create a dashboard that allows us to record the measurements and display them in a simple interface.<br>
-					So, on node-red, we realized the flow we wanted to make, starting from a payload receptiond (ttn uplink), a 'decoding' function, and then a display in the dashboard. The 'msg.payload' is only present for debugging purposes.<br>
+					Once all the <b>measurement</b> and <b>communication</b> to the gateway was done, we had to realize the '<b>interface</b>' part. We used <b>node-red</b> to create a <b>dashboard</b> that allows us to record the measurements and <b>display</b> them in a simple interface.<br>
+					So, on node-red, we realized the <b>flow</b> we wanted to make, starting from a <b>payload reception</b> (ttn uplink), a '<b>decoding</b>' function, and then a <b>display</b> in the dashboard. The 'msg.payload' is only present for debugging purposes.<br>
 					<br>
 					<img src="assets/images/NodeRedFlow.PNG" alt="" class="img-rounded center-block" width="90%">
 					<br>
-					The function we see in the node-red stream is a decoding function. It transforms the data received as input into usable data by a simple conversion of the payload from hexadecimal to decimal. This operation is performed for each payload arriving in Node-Red.<br>
+					The function we see in the node-red stream is a decoding function. It <b>transforms</b> the data received as input into usable data by a simple <b>conversion</b> of the payload from <b>hexadecimal</b> to <b>decimal</b>. This operation is performed for each payload arriving in Node-Red.<br>
 					<br>
 					<img src="assets/images/PayloadFormat.PNG" alt="" class="img-rounded center-block" width="90%">
 					<br>
-					The dashboard, once the payload has been converted, simply displays the information related to the gas sensor. Here we can see the last measurement taken as well as its evolution over a period of time. <br>
+					The dashboard, once the payload has been converted, simply <b>displays</b> the <b>information</b> related to the gas sensor. Here we can see the <b>last measurement</b> taken as well as its <b>evolution</b> over a period of time. <br>
 					<br>
 					<img src="assets/images/CaptureDashboard.PNG" alt="" class="img-rounded center-block" width="">
 
@@ -315,7 +317,7 @@
 
 
 				<p align="justify">
-					
+					By having the opportunity to follow a sensor throughout its <b>life cycle</b> (with the exception of its end of life), we were able to apprehend all the <b>basic notions</b> related to sensors, both <b>physically</b> <b>electronically</b>and .
 				</p>
 
 				<br><br><ul><li>Be able to manufacture a nano-particles sensor using micro-electronics tools: chemical synthesis, assembly, testing
@@ -327,19 +329,19 @@
 
 
 				<p align="justify">
-					
+					Thanks to the creation of our sensor in the AIME laboratory, we were able to <b>create</b> our own gas sensor using nanoparticles. We followed the <b>whole process</b> of <b>creation</b>, up to the <b>exploitation</b>.
 				</p>
 
 				<br><br><ul><li>Be able to design the datasheet of the sensor manufactured
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:gray" class="fa fa-check fa-5"></i>
 				</li></ul>
 				
 
 				<p align="justify">
-					
+					We had to write, as a group, the <b>datasheet</b> of our sensor thinking to <b>integrate</b> all the useful <b>information</b> for its <b>industrial exploitation</b>.
 				</p>
 
 				</div>
@@ -355,44 +357,46 @@
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:gray" class="fa fa-check fa-5"></i>
 				</li></ul>
 
 				<p align="justify">
-					
+					Thanks to the <b>integration</b> of our sensor on an <b>architecture</b> based on an <b>Arduino microcontroller</b>, we were able to understand how they <b>worked</b> and how to <b>use</b> them.
 				</p>
 
 				<br><br><ul><li>Be able to design data acquisition system (sensor, conditioner, microcontroller) with respect to the application
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:gray" class="fa fa-check fa-5"></i>
 				</li></ul>
 
 				<p align="justify">
-					
+					During the <b>integration</b> of our sensor to a more <b>complex architecture</b> (for the creation of the smart device), we were able to realize the whole <b>data acquisition system</b>.
 				</p>
 
 				<br><br><ul><li>Be able to design the electronic circuit of a sensor’s signal conditioner (design + simulation)
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:red" class="fa fa-check fa-5"></i>
+					<i style="color:gray" class="fa fa-check fa-5"></i>
 				</li></ul>
 
 				<p align="justify">
-					
+					We had, to <b>integrate</b> our sensor to a <b>microcontroller</b>, to realize an <b>electronic circuit</b> allowing to <b>adapt</b> the signal for this microcontroller because the <b>resistance</b> of our sensor was too high for it.
+
+					However, I wouldn't give myself all the points because I wouldn't be able to design a circuit with a similar goal for other constraints. However, I understood the goal of such a circuit, how it works for our board and how to make simulations.
 				</p>
 
 				<br><br><ul><li>Be able to design a shield to accommodate the gas sensor
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:gray" class="fa fa-check fa-5"></i>
 				</li></ul>
 
 				<p align="justify">
-					
+					Once the conditioner was done, we made our own <b>shield</b> allowing us to integrate this <b>circuit</b>, our <b>gas sensor</b> and the <b>communication chip,</b> to make our <b>smart device</b> emerge.
 				</p>
 
 				<br><br><ul><li>Be abe to design the sofware to use the gas sensor and its HMI
@@ -403,18 +407,18 @@
 				</li></ul>
 
 				<p align="justify">
-					
+					We were able, thanks to <b>Arduino code</b> and <b>Node-Red</b>, to allow our information (gas sensor measurement) to be sent to a <b>gateway</b> and be retrieved for <b>display</b> in a <b>node-red dashboard</b>.
 				</p>
 				
 				<br><br><ul><li>Be able to combine all of the above mentioned components into a smart device
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
 					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:gray" class="fa fa-check fa-5"></i>
 				</li></ul>
 
 				<p align="justify">
-					
+					All the components, both <b>hardware</b> and <b>software</b>, that we were able to create around our <b>gas sensor</b> have enabled it to become a <b>smart device</b> that can be <b>integrated</b> into a complete <b>IoT environment</b>.
 				</p>
 
 			</div>
