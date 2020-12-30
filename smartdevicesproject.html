@@ -12,8 +12,13 @@
 	
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
 
 	<!-- Custom styles for our template -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -242,9 +247,11 @@
 
 				<p align="justify">
 
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
-
-					<img src="" alt="" class="img-rounded center-block" width="">
+					In order to be able to integrate our sensor to an electronic board, we had to realize a signal conditioner. This one was going to allow to modify the current to increase it because of the great resistance that represents our gaz sensor.<br>
+					<br>
+					This great resistance made the sensor unusable with an Arduino board, a board we have to use for the communication part, developed later. So we had to adapt the current, thanks to this circuit:<br>
+					<br>
+					<img src="assets/images/adaptivecircuit.png" alt="" class="img-rounded center-block" width="95%">
 
 				</p>
 
@@ -252,7 +259,7 @@
 
 				<p align="justify">
 
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
+					Once this adaptor circuit had been designed and tested using simulation tools, we had to build a shield that would accommodate all the elements of our final architecture. We will therefore create this shield thanks to KiCad. We have integrated both this circuit and the chip used to communicate the data (RN2483 chip) and to connect our gas sensor to the shield.
 
 					<img src="" alt="" class="img-rounded center-block" width="">
 
@@ -262,9 +269,13 @@
 
 				<p align="justify">
 
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
-
-					<img src="" alt="" class="img-rounded center-block" width="">
+					We then became interested in the communication we needed to put in place to allow our sensor to be used in an IoT environment. We used an arduino for the 'test' phase and a RN2483 chip for the communication itself. We had to solder this chip to allow it to be connected to our card (at the beginning, arduino, then, at the end, our own shield). We then used arduino code and the TTN library (TheThingsNetwork) made our card communicate with a given gateway. We were able to send measurements every X seconds and retrieve them from the TTN site.<br>
+					<br>
+					<img src="assets/images/DataReception.PNG" alt="" class="img-rounded center-block" width="80%">
+					<br>
+					We also had to take into account the energy consumption of our system, and therefore put the various components on standby when we did not need to use them, in particular the antenna during the measurement phases (and therefore non-transmission), as well as putting the sensor on standby during the transmission phases, and therefore non-measurement.<br>
+					<br>
+					The arduino code allowing to realize the measurement and the sending with a reduced energy consumption can be visualized <a href="assets/reports/data_sensor.ino" target="_blank">here</a>.
 
 				</p>
 
@@ -272,9 +283,18 @@
 
 				<p align="justify">
 
-					A, quibusdam, nobis, eveniet consequatur alias doloremque officia blanditiis fuga et numquam labore reiciendis voluptas quis repellat quos sunt non dolore consectetur at sit nam tenetur dolorem? Harum, quas, sit perspiciatis esse odit temporibus aperiam nulla aspernatur sequi fugiat tempore?
-
-					<img src="" alt="" class="img-rounded center-block" width="">
+					Once all the measurement and communication to the gateway was done, we had to realize the 'interface' part. We used node-red to create a dashboard that allows us to record the measurements and display them in a simple interface.<br>
+					So, on node-red, we realized the flow we wanted to make, starting from a payload receptiond (ttn uplink), a 'decoding' function, and then a display in the dashboard. The 'msg.payload' is only present for debugging purposes.<br>
+					<br>
+					<img src="assets/images/NodeRedFlow.PNG" alt="" class="img-rounded center-block" width="90%">
+					<br>
+					The function we see in the node-red stream is a decoding function. It transforms the data received as input into usable data by a simple conversion of the payload from hexadecimal to decimal. This operation is performed for each payload arriving in Node-Red.<br>
+					<br>
+					<img src="assets/images/PayloadFormat.PNG" alt="" class="img-rounded center-block" width="90%">
+					<br>
+					The dashboard, once the payload has been converted, simply displays the information related to the gas sensor. Here we can see the last measurement taken as well as its evolution over a period of time. <br>
+					<br>
+					<img src="assets/images/CaptureDashboard.PNG" alt="" class="img-rounded center-block" width="">
 
 				</p>
 			
