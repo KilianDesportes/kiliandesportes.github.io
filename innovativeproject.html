@@ -106,17 +106,22 @@
 				<p align="justify">
 					Concerning the <b>project organization</b>, we worked with the <b>agile method</b> throughout the project. This method allows us to have a <b>close contact</b> with the <b>client</b> to allow us to develop an application that <b>suits him</b>. So we had to plan <b>weekly meetings</b> to get <b>feedback</b> on what we were doing. Our client being also our <b>technical tutor</b>, these meetings also allowed us, especially at the beginning of the project, to have an informed opinion on the <b>technologies</b> we were going to use, as they were not imposed.<br><br>
 					For the distribution of work within the group, we were asked to each work on a <b>specific part</b> of the project, in order to <b>integrate</b> our work at the end. This working method may not seem to be in line with the agile previously mentioned, but our project was better suited to this type of planning, given the different parts to be developed and the 'little' functionality we had to achieve.
-					We separated the project into two main parts, <b>image acquisition</b> and <b>recognition</b>, and the <b>mobile application</b>. Two groups of 3 students working on each part. The more precise task distribution was then done within these two subgroups, and I personally had as a task the part on <b>image recognition</b> concerning whether the places were free or not, as well as the <b>formatting</b> of this information. My work was between Teo, in charge of detecting the parking places (my input) and Yanis, in charge of the communication and server part, which used my formatted information (my output).<br>
-					Concerning my own <b>organisation</b>, I tried as much as possible to set a new goal <b>each week</b> to move forward, as the <b>weekly meetings</b> with the client went on. This organization was sometimes modified according to the work of others member of the team or other projects (related to other classes) that we had to carry out.
+					We separated the project into two main parts, <b>image acquisition</b> and <b>recognition</b>, and the <b>mobile application</b>. Two groups of 3 students working on each part. The more precise task distribution was then done within these two subgroups, and I personally had as a task the part on <b>image recognition</b> concerning whether the places were free or not, as well as the <b>formatting</b> of this information. My work was between Teo, in charge of detecting the parking places (my input) and Yanis, in charge of the communication and server part, which used my formatted information (my output).At the end of the project, teo was absent and the organization had to be <b>reviewed</b>, so I took care of both the places detection and car recognition part of the project.<br>
+					Concerning my own <b>organisation</b>, I tried as much as possible to set a new goal <b>each week</b> to move forward, as the <b>weekly meetings</b> with the client went on. This organization was sometimes modified according to the work of others member of the team or other projects (related to other classes) that we had to carry out. 
 				</p>
 				
 				<h2>Technical Development</h2>
 
 				<p align="justify">
-					During this project, I had to work on the <b>technical</b> part related to the <b>detection of free places</b> or not. 
-					I had as input data the <b>coordinates</b> of the parking spaces in the image, in real time, work done by Teo. And I had to create a <b>JSON</b> file containing the different parking places and their <b>status</b> (free or not).<br>
+					During this project, I had to work on the <b>technical</b> part related to the <b>detection of free places</b> or not.<br> 
 					<br>
-					I based myself on a code produced by olgarose on GitHub: <a href="https://github.com/olgarose/ParkingLot">https://github.com/olgarose/ParkingLot</a> <i class="fa fa-github fa-5"></i>.<br>
+					At the beginning, I had to work only on the 'car detection' part without worrying about the places detection (which was going to be our 'regions of interest'), work that had to be done by Téo. Unfortunately Téo was not available at the end of the project, so I also had to do the places detection part.<br>
+					<br>
+					Originally, I had as input data the <b>coordinates</b> of the parking spaces in the image, in real time, work done by Teo. And I had to create a <b>JSON</b> file containing the different parking places and their <b>status</b> (free or not).<br>
+					<br> 
+					I tried several <b></b>detection techniques before I could find the one that worked best. At first I was interested in image recognition using <b></b>neural networks, but since these require a <b></b>training phase and an <b></b>input data-set, I quickly deviated from this solution. I then found a work on GitHub which allows with a manual detection of the places to detect if a car was on it.<br>
+					<br>
+					<img src="assets/images/car_detection.PNG" alt="" class="img-rounded pull-right" width="250">
 					This code, written in <b>Python</b>, allows you to <b>detect</b> parking spaces by hand from an image, then perform a <b>detection</b> of the parking spaces thanks to an image processing realized with the <b>OpenCV</b> library. The recognition is performed thanks to a <b>series of functions</b> that <b>eliminate noise</b>, <b>smooth</b> the image and then <b>detect the curves</b> inside the place selected later.<br>
 					So I <b>adapted</b> this code to add several features.<br> 
 					<br>
@@ -130,8 +135,16 @@
 					<br>
 					Once this code was done, with the necessary inputs and outputs, I had to move on to <b>deploying</b> it on the <b>NVIDIA Jetson Nano</b> card. This board needed a <b>basic configuration</b>, which I made, with the installation of an <b>Operating System</b>. For this I simply followed the different instructions on the NVIDIA website.<br>
 					Once the board was ready, I had to <b>configure</b> and <b>run</b> the <b>Raspberry Pi camera</b>. I tested this camera thanks to different test codes provided by <b>Raspberry Pi</b>.<br> 
-					Once the tests were completed, I was able to <b>integrate</b> the camera into the code I had developed, by passing the <b>live video stream</b> as input instead of the mp4 videos I was used to working with. 
-					The integration went smoothly and the <b>stream</b> was well managed. 
+					Once the tests were completed, I was able to <b>integrate</b> the camera into the code I had developed, by passing the <b>live video stream</b> as input instead of the mp4 videos I was used to working with.<br> 
+					The integration went smoothly and the <b>stream</b> was well managed.<br> 
+					<br>
+					<img src="assets/images/car_detection_with_cars.PNG" alt="" class="img-rounded pull-left" width="250">
+					At the end of the project, and with the absence of Teo, I also had to realize the part of <b>detection</b> of the places. I used openCV functions to detect the <b>shapes</b> of the images and then to <b>isolate</b> the rectangles and to <b>interpolate</b> the different lacks of the detection algorithm. The weak points of this algorithm are first of all the fact that it only works with <b>places</b> defined by squares, and also that it requires some <b>adjustable inputs</b> such as the <b>approximate area</b> of a square, in pixel, or the <b>detection threshold</b> for the color of the square (depending on the shadow and lighting for example, the square will be more or less detectable).<br><br>
+					<img src="assets/images/places_detection.PNG" alt="" class="img-rounded pull-right" width="250"><br><br><br><br><br><br>
+					I had to later, being able to test my detection algorithm at the last minute, review my <b>car detection algorithm</b>, the previous one working quite badly. 
+					I turned to a solution a bit <b>restrictive</b> but <b>very efficient</b>, the <b>background substraction</b>. A technique that requires a 'blank' (<b>car-free</b>) picture of the parking lot and uses this image to detect if a car or not is present on the place (by dividing it into different zones (the places) and comparing it with the base image).
+					
+
 				</p>
 
 				<h2>Developped skills and knowledge</h2>
@@ -144,10 +157,10 @@
 				<div id="divInnovProject" style="display: none"><br>
 
 				<ul><li>Analyse a real-life problem
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
 				</li></ul>
 				
 				<p align="justify">
@@ -155,32 +168,33 @@
 				</p>
 
 				<ul><li>Suggest a technological solution to a problem
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
 				</li></ul>
 				
 				<p align="justify">
 					We proposed a <b>solution</b> to this problem thanks to a <b>complete architecture</b> allowing to <b>find parking spaces</b>. This complete architecture includes <b>cameras</b> filming the spaces, <b>analysis algorithms</b>, a <b>server</b> for <b>communication</b> and <b>storage</b>, and an <b>application</b> to make the <b>information</b> available.
+					I was also able, for my part, to set up <b>several</b> solutions to see the <b>most effective</b> one.
 				</p>
 
 				<ul><li>Implement a prototype to solve the problem
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:red" class="fa fa-check fa-5"></i>
+					<i style="color:red" class="fa fa-check fa-5"></i>
 				</li></ul>
 				
 				<p align="justify">
-					Thanks to the <b>camera</b> we used, we were able to set up a <b>prototype</b> to <b>detect</b> and <b>communicate</b> to the application the places available on the campus. 
+					With the <b>constraints</b> and <b>problems</b> encountered at the end of the project, we have not been able to make a <b>prototype integrating all the architecture planned</b>, the camera being <b>missing</b>. It would have taken a little <b>more time</b> to be able to integrate it into our prototype.
 				</p>
 				
 				<ul><li>Present and debate (in English) the technical choice made
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green"class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
 				</li></ul>
 				
 				<p align="justify">
@@ -188,10 +202,10 @@
 				</p>
 
 				<ul><li>Produce a report (in English) for the developed project
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
-					<i class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
+					<i style="color:green" class="fa fa-check fa-5"></i>
 				</li></ul>
 				
 				<p align="justify">
@@ -204,7 +218,7 @@
 			<h2>Conclusion</h2>
 				
 			<p align="justify">
-				This project allowed us to see how, starting from an issue, to build and implement a whole project, all in an IoT environment. The fact of working on several parts in a team and in the end all integrated and something that we have done little at INSA and working like this is also interesting. The agile part, although this way of working had already been experienced, was also good for me. Regarding the technical side, I was able to introduce myself and self-training on image recognition, although it was not me who made the bulk of the code, I had to understand and appropriate it to adapt it to our project. I was also able to greatly develop my skills in python, a language we didn't use much at INSA, as well as my project management skills. 
+				This project allowed us to see how, starting from an issue, to build and implement a whole project, all in an IoT environment. The fact of working on several parts in a team and in the end all integrated and something that we have done little at INSA and working like this is also interesting. The agile part, although this way of working had already been experienced, was also good for me. Regarding the technical side, I was able to introduce myself and self-training on image recognition, although it was not me who made the bulk of the code, I had to understand and appropriate it to adapt it to our project. I was also able to greatly develop my skills in python, a language we didn't use much at INSA, as well as my project management skills. Unfortunately, the end of the project was a bit chaotic, and the project could not be finalized as it should have been, which is a pity. We were still able to present something in the final defense, and I'm quite happy with what I was able to achieve during this project.
 			</p>
 
 			</article>
